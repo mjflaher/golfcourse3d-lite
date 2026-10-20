@@ -1,0 +1,186 @@
+{
+ "source": "\u00a9 OpenStreetMap contributors, ODbL 1.0 \u2014 via overpass-api.de",
+ "fetched": "2026-10-20T02:21:43.900Z",
+ "courses": [
+  {
+   "id": "way47798662",
+   "name": "Exeter Country Club",
+   "holes": 12,
+   "bytes": 126192
+  },
+  {
+   "id": "way88981692",
+   "name": "Hidden Valley Championship Course",
+   "holes": 28,
+   "bytes": 227483
+  },
+  {
+   "id": "way154045637",
+   "name": "Sanford Country Club",
+   "holes": 18,
+   "bytes": 150790
+  },
+  {
+   "id": "way244876993",
+   "name": "The Oaks",
+   "holes": 18,
+   "bytes": 195174
+  },
+  {
+   "id": "way290468825",
+   "name": "Webhannet Golf Club",
+   "holes": 18,
+   "bytes": 220741
+  },
+  {
+   "id": "way290468835",
+   "name": "Cape Arundel Golf Club",
+   "holes": 18,
+   "bytes": 157436
+  },
+  {
+   "id": "way290695520",
+   "name": "Cape Neddick Golf Club",
+   "holes": 18,
+   "bytes": 201012
+  },
+  {
+   "id": "way290695527",
+   "name": "The Ledges Golf Club",
+   "holes": 18,
+   "bytes": 263503
+  },
+  {
+   "id": "way295128979",
+   "name": "Rockingham Country Club",
+   "holes": 9,
+   "bytes": 102188
+  },
+  {
+   "id": "way297826559",
+   "name": "Pine Hollow Little Par Three Golf Course",
+   "holes": 0,
+   "bytes": 18083
+  },
+  {
+   "id": "way297832801",
+   "name": "Rochester Country Club",
+   "holes": 18,
+   "bytes": 184132
+  },
+  {
+   "id": "way301867063",
+   "name": "Amesbury Golf and Country Club",
+   "holes": 9,
+   "bytes": 55650
+  },
+  {
+   "id": "way307667001",
+   "name": "Outlook Golf",
+   "holes": 18,
+   "bytes": 159498
+  },
+  {
+   "id": "way320111052",
+   "name": "Abenaqui Country Club",
+   "holes": 19,
+   "bytes": 224209
+  },
+  {
+   "id": "way320123435",
+   "name": "Apple Hill Golf Club",
+   "holes": 27,
+   "bytes": 170826
+  },
+  {
+   "id": "way320123438",
+   "name": "Breakfast Hill Golf Club",
+   "holes": 18,
+   "bytes": 260587
+  },
+  {
+   "id": "way320123444",
+   "name": "Pease Golf Course",
+   "holes": 40,
+   "bytes": 501030
+  },
+  {
+   "id": "way320123445",
+   "name": "Portsmouth Country Club",
+   "holes": 21,
+   "bytes": 267946
+  },
+  {
+   "id": "way320123446",
+   "name": "The Golf Club of New England",
+   "holes": 18,
+   "bytes": 379292
+  },
+  {
+   "id": "way435405607",
+   "name": "Locke Lake Links",
+   "holes": 6,
+   "bytes": 162382
+  },
+  {
+   "id": "way791025659",
+   "name": "Sagamore-Hampton Golf Club",
+   "holes": 18,
+   "bytes": 140344
+  },
+  {
+   "id": "way809873477",
+   "name": "Nippo Lake Golf Course",
+   "holes": 18,
+   "bytes": 124091
+  },
+  {
+   "id": "way882067093",
+   "name": "Candia Woods",
+   "holes": 18,
+   "bytes": 102510
+  },
+  {
+   "id": "way995516260",
+   "name": "Dutch Elm Golf Club",
+   "holes": 18,
+   "bytes": 153876
+  },
+  {
+   "id": "way997612921",
+   "name": "Merriland Farm",
+   "holes": 9,
+   "bytes": 23473
+  },
+  {
+   "id": "way1151076019",
+   "name": "Farmington Country Club",
+   "holes": 9,
+   "bytes": 98587
+  },
+  {
+   "id": "way1537618063",
+   "name": "Lebanon Pines Golf Course",
+   "holes": 9,
+   "bytes": 14238
+  },
+  {
+   "id": "relation3961494",
+   "name": "Wentworth by the Sea Country Club",
+   "holes": 18,
+   "bytes": 259018
+  },
+  {
+   "id": "relation10351658",
+   "name": "York Golf and Tennis Club",
+   "holes": 18,
+   "bytes": 174429
+  },
+  {
+   "id": "relation17685266",
+   "name": "Old Marsh Country Club",
+   "holes": 18,
+   "bytes": 190796
+  }
+ ]
+}
