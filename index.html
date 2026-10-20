@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<title>GolfCourse3D Lite</title><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Golf3D Lite">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#101412"><meta name="description" content="3D golf hole flyovers, plays-like yardages and green reading. No account, no GPS.">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">  <script type="module" crossorigin src="./assets/index-BU3GHK0l.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BFDblgRY.css">
+</head><body class="lite">
+<header><button id="homebtn">☰ Menu</button><b id="rtitle">Golf 3D</b><nav><button data-v="map" class="on">Map</button><button data-v="card">Card</button><button id="endbtn">End</button></nav></header>
+<div id="map"></div>
+<button id="gear" aria-label="Map settings">⚙</button><div id="hud"><button id="t3d" class="active">⛰ 3D: ON</button><label>Relief<input id="ex" type="range" min="1" max="4" step="0.25" value="2.25"> <span id="exv">2.25×</span></label><button id="gps">📍 GPS</button><div id="gpsnote" class="small"></div><label>Tilt<input id="tilt" type="range" min="0" max="60" step="1" value="25"> <span id="tiltv">25°</span></label><button id="ov">Overview</button><button id="plays">🏆 Tournament mode: OFF</button><div id="wset" class="small">Wind <label><input id="wman" type="checkbox"> manual</label> <input id="wspd" type="number" min="0" max="60" style="width:3.5em"> mph from <input id="wdir" type="number" min="0" max="359" style="width:3.5em">° <button id="wref">↻ live</button></div><button id="edhole">✏️ Edit hole</button><button id="watchsend">⌚ Send to watch</button><button id="watchlog">📋 Watch log</button><div id="watchst" class="small"></div></div>
+<!-- shot UI: layout B "side rail" (rail + score pill/popover + bottom hole bar). Logic lives in src/shotui.ts -->
+<button id="scorepill" aria-label="Score"><span><b id="sp-s">–</b> <i>score</i></span><span><b id="sp-p">–</b> <i>putts</i></span><span id="sp-v" class="vs"></span></button>
+<div id="pop"><div class="steps">
+  <div class="st"><span>Score</span><div><button data-s="hs" data-d="-1">−</button><input id="hs" type="number" min="1" class="n"><button data-s="hs" data-d="1">＋</button></div></div>
+  <div class="st"><span>Putts</span><div><button data-s="hp" data-d="-1">−</button><input id="hp" type="number" min="0" class="n"><button data-s="hp" data-d="1">＋</button></div></div>
+  <div class="st"><span>Penalty</span><div><button data-s="hpen" data-d="-1">−</button><input id="hpen" type="number" min="0" class="n" placeholder="0"><button data-s="hpen" data-d="1">＋</button></div></div></div>
+ <div id="editlbl" class="small muted"></div><div id="ninetog" class="row"><button id="nine-f" class="on">Front 9</button><button id="nine-b">Back 9</button></div><div id="minicard"></div><div class="small muted" id="shotsh">Shots</div><div id="shots" class="small"></div>
+ <div class="row"><button id="shotmode">＋ Tap shot on map</button><select id="club"></select></div><div id="sugg" class="small"></div>
+ <div class="small muted hint">Plan line: tap map to add a point · hold &amp; drag a point or the tee · double-tap a point to remove</div>
+ <div class="row"><button id="endbtn2">End round</button><button id="popclose">Close</button></div><div id="tdiag" class="small" style="color:#9fc">Terrain: starting…</div></div>
+<div id="rail"><button id="rup" aria-label="Longer club">▲</button><div id="wheel"></div><button id="rdn" aria-label="Shorter club">▼</button><button id="markgps"><span>📍</span>MARK</button></div>
+<section id="panel">
+ <div id="status" class="small"></div>
+ <div id="profwrap"><canvas id="prof" height="80"></canvas><div id="pinfo" class="small"></div></div>
+ <div id="gpshint" class="small" style="display:none"></div><div id="wind" title="Wind"></div><div id="dist"><div class="s">Front<b id="df">–</b><i id="dfp"></i></div><div class="c">Center<b id="dc">–</b><i id="dp">–</i></div><div class="s">Back<b id="db">–</b><i id="dbp"></i></div></div>
+ <label id="synclbl" class="small sync" style="display:none!important"><input type="checkbox" id="syncplan2"> Also update course plan</label>
+ <div id="holebar"><button id="menu2" class="ib">☰</button><button id="prev" class="ib">◀</button><b id="htitle">Hole –</b><button id="next" class="ib">▶</button></div>
+</section>
+<div id="greenui">
+ <button id="gclose">✕ Close green</button>
+ <div id="glegend"><canvas id="glegcv" width="140" height="14"></canvas><div class="small" id="glegtxt">–</div></div>
+ <div id="ginfo" class="small"></div>
+ <div id="gplan" class="small" style="display:none"></div>
+ <div id="gsel"><span class="small">Mark type</span><button data-kind="putt">Putt</button><button data-kind="chip">Chip</button></div>
+ <button id="gundo" style="display:none">Undo remove</button>
+ <div id="gputt" class="small" style="display:none"></div>
+ <div id="gbtns"><button id="gball">⚪ Ball</button><button id="gmark">📍 Mark on green</button><button id="gpinhere" class="off" title="Move the pin to where you are standing">📍 Pin here</button></div>
+</div>
+<div id="planbar"><b>📐 Plan course</b><span id="planstat" class="small"></span><label class="small" style="display:none"><input type="checkbox" id="syncplan"> Also update course plan</label><button id="plandone">Done</button></div>
+<button id="slopeline" class="small"><span id="slopetxt"></span><span id="chev"></span></button>
+<div id="hpick"></div><section id="card" class="page"></section><section id="home" class="page"></section><div id="slope"></div><div id="dlbar"></div>
+<div id="edbar"><div class=row><b>Edit hole</b><input id="edref" type="number" min="1" max="27" class="n"><label>Par <select id="edpar"><option>3</option><option selected>4</option><option>5</option><option>6</option></select></label></div>
+<div id="edstep" class="small"></div><div class=row><button id="edreset">Reset</button><button id="eddel">Remove custom</button><button id="edcancel">Cancel</button><button id="edsave">Save</button></div></div>
+</body></html>
